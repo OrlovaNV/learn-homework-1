@@ -14,12 +14,20 @@
     Программа: Программирую
     
 """
+dialogue = {"Как дела?": "Хорошо!", "Что делаешь?": "Программирую",
+"Какие планы?": "Наполеоновские"}
 
 def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+  
+  while True:
+      ask_user = input('Введите ваш вопрос: ')
+      for key, value in dialogue.items():
+        if ask_user == key:
+          print(value)
+          break 
+      else:
+        print("Напишите другой вопрос")
+
     
 if __name__ == "__main__":
     ask_user()
