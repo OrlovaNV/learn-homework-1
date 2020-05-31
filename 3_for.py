@@ -16,19 +16,22 @@ def main():
     В ней надо заменить pass на ваш код
     """
     sum_school = 0
+    value_school = 0
     for i in range(len(school_scores)):
-      sum_class = 0
-    
-      for score in school_scores[i]['scores']:
-        sum_class += score
-      average_value = sum_class/len(school_scores[i]['scores'])
-      class_number = school_scores[i]['school_class']
-      print(f'Средний балл {class_number} класса: {average_value}')
+        sum_class = 0
+        
+        for score in school_scores[i]['scores']:
+            sum_class += score
+        average_value = sum_class/len(school_scores[i]['scores'])
+        class_number = school_scores[i]['school_class']
+        print(f'Средний балл {class_number} класса: {average_value}')
             
-      sum_school += sum_class
-      
-    average_value_school =  sum_school/(len(school_scores[i]['scores'])*len(school_scores))
+        sum_school += sum_class
+        value_school += len(school_scores[i]['scores'])
+            
+    average_value_school  =  sum_school/value_school
     print(f'Средняя оценка по школе: {average_value_school}')
+
 
 if __name__ == "__main__":
     main()

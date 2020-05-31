@@ -1,24 +1,19 @@
+ 
+def check(a, b):
+    if type(a) != str or type(b) != str:
+        return 0 
+    elif len(a) > len(b):
+        return 2
+    elif len(a) != len(b) and b == "Learn":
+        return 3
+    else:
+        return 1
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    def check(a, b):
-        if type(a) != str or type(b) != str:
-          return '0' 
-        elif len(a) > len(b):
-          return '2'
-        elif len(a) != len(b) and b == "Learn":
-          return '3'
-        else:
-          return '1' 
-    
-    print(check(int(5) , int(12)))
+    print(check(5, 12))
     print(check("Python", "Learn"))   
     print(check("Hello", "Learn")) 
-    print(check("New", "Learn"))   
-
+    print(check("New", "Learn"))  
 
 if __name__ == "__main__":
     main()

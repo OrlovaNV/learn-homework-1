@@ -18,8 +18,7 @@ dialogue = {"Как дела?": "Хорошо!", "Что делаешь?": "Пр
 "Какие планы?": "Наполеоновские"}
 
 def ask_user():
-  
-  while True:
+    while True:
       ask_user = input('Введите ваш вопрос: ')
       for key, value in dialogue.items():
         if ask_user == key:
@@ -28,6 +27,5 @@ def ask_user():
       else:
         print("Напишите другой вопрос")
 
-    
 if __name__ == "__main__":
     ask_user()

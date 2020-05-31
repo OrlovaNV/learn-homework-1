@@ -12,11 +12,9 @@
     
 """
 def get_summ(num_one, num_two):
-  
       try:
         result = int(num_one) + int(num_two)
         return(result)
-
       except ValueError:
         return('Приведение типов не сработало')
      
